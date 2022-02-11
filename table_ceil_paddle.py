@@ -90,7 +90,7 @@ class table:
         self.res = cor
         self.workbook = workbook
 
-    def table_ocr(self):
+    def table_coordinate(self):
         """use ocr and match ceil"""
         h, w = self.img.shape[:2]
         self.crops = []
@@ -228,7 +228,7 @@ def main():
         cv2.imwrite(pngP, img)
         # if workbook is not None:
         #     workbook.save(os.path.splitext(img)[0] + '.xlsx')
-        tableDetect.table_ocr()
+        tableDetect.table_coordinate()
         enter_line = tableDetect.enter_line
         lines = tableDetect.lines
         tableDetect.clear()
