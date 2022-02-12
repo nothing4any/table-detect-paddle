@@ -188,7 +188,7 @@ def base64_to_cv2(b64str):
 app = Flask(__name__)
 
 
-@app.route('/bigData/dossierRecognition/tableDetect/tableCeil', methods=["POST"])
+@app.route('/tableCeil', methods=["POST"])
 def main():
     if request.method == 'POST':
         imgStreamInfo = request.json
